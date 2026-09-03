@@ -1,0 +1,20 @@
+id,param,baseline,unit,lower,upper,distribution,type,module,scales,correlation,justification
+1,alpha,0.02,per_year_productivity_growth,0.015,0.025,uniform,continuous,macro,alpha,independent,Bovari 2020 §4.1 headline uncertainty (long-run labour-productivity growth; Nordhaus 2017)
+2,k_pi,0.575318414,dimensionless_investment_slope,0.40,0.75,uniform,continuous,macro,k_pi,jointly-estimated-fallback-independent,Behavioural function regressed in Bovari 2018 App. C; no published SE -> symmetric fallback (assumption)
+3,div_pi,0.4729,dimensionless_dividend_slope,0.33,0.61,uniform,continuous,macro,div_pi,jointly-estimated-fallback-independent,Behavioural function regressed in Bovari 2018 App. C; no published SE -> symmetric fallback (assumption)
+4,phi_1,0.468777035,dimensionless_phillips_slope,0.33,0.61,uniform,continuous,macro,phi_1,jointly-estimated-fallback-independent,Behavioural function regressed in Bovari 2018 App. C; no published SE -> symmetric fallback (assumption)
+5,eta,0.3,dimensionless_price_viscosity,0.2,0.5,uniform,continuous,macro,eta,independent,Calvo-analogue price viscosity (Bovari 2018 n.9); range spans code 0.3 and Bovari 0.5
+6,g_sigma,-0.0105,per_year_emission_intensity_decline,-0.0137,-0.0074,uniform,continuous,energy,g_sigma,mild-with-delta_g_sigma,Autonomous decarbonisation (DICE); weak consensus (Bovari 2020 n.21) -> +/-30%
+7,delta_g_sigma,-0.001,per_year2,-0.0013,-0.0007,uniform,continuous,energy,delta_g_sigma,mild-with-g_sigma,Decay of decarbonisation rate (DICE) -> +/-30%
+8,theta,2.6,dimensionless_abatement_curvature,2.0,3.0,uniform,continuous,energy,theta,independent,Abatement-cost curvature (Nordhaus/DICE); standard 2-3 range
+9,g_pbs,-0.00505076337,per_year_backstop_price_decline,-0.00657,-0.00354,uniform,continuous,energy,g_pbs,independent,Backstop-price decline (Nordhaus) -> +/-30%
+10,beta_car,0.902,dimensionless_fossil_elasticity,0.85,0.95,uniform,continuous,energy,beta_car,independent,Fossil/bio energy elasticity (Eriksson 2015 SA varied energy elasticity; share-calibrated)
+11,m_phiF,1.0,multiplier_on_phi_bor_tem_tro,0.80,1.20,uniform,continuous,forest,phi_bor;phi_tem;phi_tro,neg-corr-with-m_Fmax(caveat-only),Eriksson 2015 App. C varied intrinsic forest growth +/-20%; single multiplier preserves calibrated biome ratios
+12,m_Fmax,1.0,multiplier_on_Fmax_bor_tem_tro,0.85,1.15,uniform,continuous,forest,Fmax_bor;Fmax_tem;Fmax_tro_init,neg-corr-with-m_phiF(caveat-only),Eriksson 2015 App. C varied carrying capacity; conservative +/-15% multiplier
+13,delta_E_tro,-0.0220096,per_year_deforestation_emission_decline,-0.0286,-0.0154,uniform,continuous,forest,delta_E_tro,independent,Deforestation-emission decline re-based to FAOSTAT 2015 -> +/-30%
+14,delta_CH,0.0173287,per_year_wood_product_decay,0.013863,0.023105,uniform,continuous,forest,delta_CH,independent,Wood-product carbon decay = log(2)/HL for half-life 30-50 yr (Eriksson 2015 HL=40); verified live control (HL intermediate is inert)
+15,S,3.1,degC_equilibrium_climate_sensitivity,2.5,4.0,uniform,continuous,climate,S,independent,Bovari 2020 headline uncertainty; IPCC AR6 likely range 2.5-4.0 degC
+16,CUP_pind,360,GtC_e_upper_reservoir,324,396,uniform,continuous,climate,CUP_pind,independent,Bovari 2020 headline uncertainty (carbon-cycle inertia) -> +/-10%
+17,gamma_ast,0.0176,per_year_heat_exchange,0.0150,0.0202,uniform,continuous,climate,gamma_ast,mild-with-S,Two-layer heat-exchange coefficient (Geoffroy/Nordhaus) -> +/-15%
+18,f1,1.52638276079,cost_level,1.068,1.984,uniform,continuous,cost,f1,mild-with-f2,Eriksson 2015 SA varied avoided-deforestation cost; matches existing N2048 +/-30%
+19,f2,1.18258619118984,cost_curvature,0.828,1.537,uniform,continuous,cost,f2,mild-with-f1,Eriksson 2015 SA varied avoided-deforestation cost; matches existing N2048 +/-30%

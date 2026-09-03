@@ -1,0 +1,36 @@
+# R session data
+.RData
+.Rhistory
+.Rproj.user/
+*.Rproj
+
+# Generated C++ (regenerated from model.R / RawCpp templates at runtime)
+CppCodeRK4.cpp
+CppCodeMinDist.cpp
+*.o
+*.so
+*.dll
+
+# Generated figures (reproducible by running the scripts)
+figures/*
+!figures/.gitkeep
+
+# Generated sensitivity-analysis outputs (reproducible by running the scripts)
+sensitivity_analysis/outputs/
+sensitivity_analysis/figures/
+sensitivity_analysis/tables/
+sensitivity_analysis/logs/
+sensitivity_analysis/outputs_refined/*
+!sensitivity_analysis/outputs_refined/.gitkeep
+sensitivity_analysis/figures_final/*
+!sensitivity_analysis/figures_final/.gitkeep
+sensitivity_analysis/tables_final/*
+!sensitivity_analysis/tables_final/.gitkeep
+sensitivity_analysis/outputs_fullsystem/
+sensitivity_analysis/figures_fullsystem/
+sensitivity_analysis/tables_fullsystem/
+sensitivity_analysis/logs_fullsystem/
+
+# OS
+.DS_Store
+Thumbs.db

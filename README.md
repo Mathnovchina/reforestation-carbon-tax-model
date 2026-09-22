@@ -1,4 +1,5 @@
 # Reforestation Policy under Carbon Taxation
+Model: ReForest-SFC 1.0.0
 
 Model and analysis code for a continuous-time, stock-flow-consistent (SFC) macro-financial model coupling a Goodwin–Keen economy to energy, emissions, climate, and a three-biome forest module. The model simulates the joint climate, forest, and macro-financial consequences of carbon taxation and reforestation policy over 2016–2100, and is solved with a fourth-order Runge–Kutta (RK4) integrator generated from the model equations and compiled through `Rcpp`.
 
